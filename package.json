@@ -1,0 +1,17 @@
+{
+    "name": "web-rtc-app",
+    "version": "1.0.0",
+    "description": "Meeting app using socket.io and webrctc",
+    "main": "index.js",
+    "author": "Bhavy",
+    "license": "ISC",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.18.2",
+        "peer": "^0.6.1",
+        "socket.io": "^4.5.4"
+    }
+}

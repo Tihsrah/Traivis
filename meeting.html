@@ -2,206 +2,96 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- css -->
-    <link rel="stylesheet" href="css\styles.css">
-    <link rel="stylesheet" href="css\chat-styles.css">
-    <link rel="stylesheet" href="css\bootstrap.min.css">
-    <link rel="stylesheet" href="css\meet-style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-
-    <!-- tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
-  <link href="https://unpkg.com/tailwindcss@^2.2.7/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
-      rel="stylesheet"> -->
-
-    <!----===== Boxicons CSS ===== -->
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-
-    <!-- Font Awesome CSS -->
-
-    <!--<title>Dashboard Sidebar Menu</title>-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Traivis Meet</title>
+    <link rel="stylesheet" href="css\\bootstrap.min.css" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="css\\meet-style.css" />
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
 </head>
 
 <body>
-    <nav class="sidebar close">
-        <header>
-            <div class="image-text">
-                <span class="image">
-                    <img src="assets\logo.jpg" alt="">
-                </span>
-
-                <div class="text logo-text">
-                    <span class="name">Traivis</span>
-                    <!-- <span class="profession">Web developer</span> -->
-                </div>
-            </div>
-
-            <i class='bx bx-chevron-right toggle'></i>
-        </header>
-
-        <div class="menu-bar">
-            <div class="menu">
-
-                <li class="search-box">
-                    <i class='bx bx-search icon'></i>
-                    <input type="text" placeholder="Search...">
-                </li>
-
-                <ul class="menu-links">
-                    <li class="nav-link">
-                        <a href="meeting.html">
-                            <!-- <i class='bx bx-home-alt icon' ></i> -->
-                            <i class='bx bxs-dashboard icon'></i>
-                            <span class="text nav-text">Meet</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <!-- <i class='bx bx-bar-chart-alt-2 icon' ></i> -->
-                            <i class='bx bx-lock-alt icon'></i>
-                            <span class="text nav-text">Lock</span>
-                        </a>
-                    </li>
-
-
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <!-- <i class='bx bx-pie-chart-alt icon' ></i> -->
-                            <i class='bx bx-user icon'></i>
-                            <span class="text nav-text">Attendees</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="#">
-                            <!-- <i class='bx bx-heart icon' ></i> -->
-                            <i class='bx bxs-calendar icon'></i>
-                            <span class="text nav-text">Calendar</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-bell icon'></i>
-                            <span class="text nav-text">Notifications</span>
-                        </a>
-                    </li>
-
-
-                </ul>
-            </div>
-
-            <div class="bottom-content">
-                <li class="">
-                    <a href="#">
-                        <!-- <i class='bx bx-log-out icon' ></i> -->
-                        <i class='bx bxs-cog icon'></i>
-                        <span class="text nav-text">Settings</span>
-                    </a>
-                </li>
-
-                <li class="mode">
-                    <div class="sun-moon">
-                        <i class='bx bx-moon icon moon'></i>
-                        <i class='bx bx-sun icon sun'></i>
-                    </div>
-                    <span class="mode-text text">Dark mode</span>
-
-                    <div class="toggle-switch">
-                        <span class="switch"></span>
-                    </div>
-                </li>
-
-            </div>
-        </div>
-    </nav>
-
-
-
-    <main class="" container-fluid d-flex flex-column home-wrap">
-        <div class="g-top text-light"></div>
-        <div class="top-remote-video-show-rap d-flex">
-            <div id="meetingContainer" class="w-75 d-none">
-                <div class="" call-wrap" style="background-color:black;">
-                    <div class="video-wrap" id="divUsers" style="display:flex; flex-wrap:wrap">
-                        <div id="me" class="userbox-display-center flex-column">
-                            <h2 class="display-center" style="font-size:14px;" </h2>
-                                <div class="display-center">
-                                    <video autoplay muted id="LocalVideoPlayer"></video> #Local video cam
-                                </div>
-                        </div>
-                        <div id="otherTemplate" class="userbox display-center flex-column" style="display:none">
-                            <h2 class="display-center" style="font-size:14px;" </h2>
-                                <div class="display-center">
-                                    <video autoplay muted></video> # Other users video
-                                    <audio autoplay controls muted style="display: none"></audio>
-                                </div>
-
-
+    <main class="main-wrap d-flex flex-column">
+        <div class="top-block text-light d-flex">
+            <div id="meeting" class="top-remote-video-show-wrap d-flex w-75"></div>
+            <div class="
+            info
+            bg-light
+            text-secondary
+            d-flex
+            flex-column
+            align-items-center
+          ">
+                <div class="info-header d-flex w-100 justify-content-around">
+                    <div class="info-parts pt-2 w-50 cursor-pointer text-center parts-btn">
+                        <div class="info-parts">
+                            <span class="material-icons">people</span>
+                            <small id="userCount" class="info-parts__count">0</small>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div
-            class="g-top-left bg-light text-secondary w-25 d-flex align-items-center justify-content-between pl-2 pr-2">
-            <div class="top-left-participant-wrap pt-2 cursor-pointer">
-                <div class="top-left-particpant-icon">
-                    <span class="material-icons">people</span>
-                </div>
-                <div class="top-left-participants-count"></div>
-            </div>
-            <div class="top-left-chat-wrap pt-2 cursor-pointer">
-                <span class="material-icons">message</span>
-
-            </div>
-            <div class="top-left-time-wrap"></div>
-        </div>
-
-        <div class="g-bottom bg-light m-0 d-flex hustify-content-between align-items-center">
-            <div class="bottom-left d-flex" style="height: 10vh">
-                <div class="display-center cursor-pointer meeting-details-button">
-                    Meeting Details <span class="material-icons">expand_more</span>
-                </div>
-            </div>
-            <div class="bottom-middle d-flex just-content-center align-items-center" style="height: 10vh;">
-                <div class="mic-toggle-wrap action-icon-style display-center mr-2 cursor-pointer" id="miceMuteUnmute">
-                    <span class="material-icons">mic_off</span>
-                </div>
-                <div class="end-call-wrap action-icon-style display-center mr-2 cursor-pointer">
-                    <span class="material-icons text-danger">call</span>
-                </div>
-                <div class="video-toggle-wrap action-icon-style display-center mr-2 cursor-pointer">
-                    <span class="material-icons">videocam_off</span>
-                </div>
-            </div>
-            <div class="bottom-right d-flex justify-content-center align-items-center mr-3" style="height: 10vh;">
-                <div
-                    class="present-now-wrap d-flex just-content-cemter flex-column align-items-center mr-5 cursor-pointer">
-                    Present Now <span class="material-icons">present_to_all</span>
-                    <!-- <div>Present Now</div> -->
-                </div>
-                <div class="option-wrap cursor-pointer display-center" style="height: 10vh;">
-                    <div class="option-icon">
-                        <span class="material-icons">more_vert</span>
+                    <div class="pt-2 text-center cursor-pointer w-50 chat-btn">
+                        <span class="material-icons">message</span>
                     </div>
                 </div>
+                <div id="chat" class="info-chat flex-column w-100 justify-content-between">
+                    <div id="messages" class="info-messages"></div>
+                    <div class="info-input pr-2 pl-2 pb-2">
+                        <form>
+                            <div class="form-row">
+                                <div class="col">
+                                    <input id="input" type="text" class="form-control" placeholder="Type Here..." />
+                                </div>
+                                <button type="submit" class="btn btn-small btn-outline-danger">
+                                    <span class="material-icons-outlined"> send </span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="parts" class="info-parts w-100">
+                    <ul class="parts-list list-group list-group-flush"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-block bg-light m-0 d-flex justify-content-between align-items-center">
+            <div class="bottom-left d-flex">
+                <div class="display-center cursor-pointer flex-column show-btn">
+                    <span class="material-icons">message</span>
+                    Chat
+                </div>
+                <div class="display-center cursor-pointer flex-column show-btn">
+                    <span class="material-icons">person</span>
+                    Participants
+                </div>
+            </div>
+            <div class="bottom-middle d-flex align-items-center justify-content-center">
+                <div class="mic-toggle action-icon-style display-center mr-2 cursor-pointer" id="muteMicro">
+                    <span class="material-icons">mic</span>
+                </div>
 
+                <div class="video-toggle action-icon-style display-center mr-2 cursor-pointer">
+                    <span class="material-icons">videocam</span>
+                </div>
+
+                <div class="logout action-icon-style display-center mr-2 cursor-pointer text-danger">
+                    <span class="material-icons">call_end</span>
+                </div>
+
+            </div>
+            <div class="bottom-right d-flex justify-content-center align-items-center">
+                <div class=" present d-flex justify-content-center flex-column align-items-center mr-5 cursor-pointer">
+                    <span class="material-icons"> present_to_all </span>
+                    Present Screen
+                </div>
             </div>
         </div>
     </main>
-
-
-    <script src="index.js"></script>
-
+    <script src="js\socket.js" type="module"></script>
+    <script src="js\meeting.js"></script>
 </body>
 
 </html>

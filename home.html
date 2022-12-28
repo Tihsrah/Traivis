@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create or join Meeting</title>
+    <link rel="stylesheet" href="css\\bootstrap.min.css" />
+    <link rel="icon" href="public/assets/images/favicons/favicon-32x32.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="css\\home_style.css" />
+</head>
+
+<body>
+    <nav class="container navbar">
+        <div class="navbar-icon d-flex align-items-center">
+            <img src="assets\\logo.jpg" class="logo" alt="logo" />
+
+            <a href="#" class="navbar-brand text-dark">Traivis Meet</a>
+        </div>
+        <div>
+            <ul class="navbar-nav mr-auto flex-row">
+                <li class="nav-item" >
+                    <button class=" btn btn-lg btn-outline-secondary text-info font-weight-bold focus-btn join-btn ">
+                        Join Meeting
+                    </button>
+ 
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-info btn-lg text-light font-seight-bold create-btn">
+                        Create Meeting
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="pt-5">
+        <div class="container-xl">
+            <div class="jumbotron h-100 d-flex justify-content-between">
+                <div class=" mx-0 w-50 d-flex flex-column justify-content-between">
+                    <h1 class="jumbotron-title">
+                        Traivis Meetings
+                    </h1>
+                    <p class="jumbotron-text">
+                        We are shaping tomorrow's E-learning industry through implementing the Blockchain, Artificial
+                        intelligence (AI), and Metaverse
+                        <br> Create or Join Meetings here...
+                    </p>
+                    <ul class="jumbotron-btn display-center justify-content-between">
+                        <li class="">
+                            <div class="text-dark font-weight-bold display-center join-wrapper" height>
+                                <span class="material-icons mr-2">keyboard</span>
+                                <input type="text" placeholder="Meeting Id" style="border: none"
+                                    class="join-input" />
+                            </div>
+                        </li>
+                        <li class="text-dark font-weight-bold">
+                            <button class="btn btn-lg btn-info join-btn">
+                                Join Here
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="start">
+                        <button class="
+                  btn btn-lg
+                  text-light
+                  w-100
+                  font-weight-bold
+                  display-center
+                  create-btn
+                " style="background-color: #695CFE">
+                            <span class="material-icons mr-2">video_call</span>
+                                Start a Meeting                            
+                        </button>
+                    </div>
+                </div>
+                <div class="container w-50">
+                    <img src="assets\\people_home.jpg" alt="people" class="signin-image" />
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js\action.js"></script>
+</body>
+
+</html>
