@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- css -->
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css\chat-styles.css"> 
-  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- css -->
+  <link rel="stylesheet" href="css\styles.css">
+  <!-- <link rel="stylesheet" href="css\chat-styles.css">  -->
+
   <!-- tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" />
@@ -15,65 +16,66 @@
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
       rel="stylesheet"> -->
 
-    <!----===== Boxicons CSS ===== -->
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <!----===== Boxicons CSS ===== -->
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- Font Awesome CSS -->
-        
-    <!--<title>Dashboard Sidebar Menu</title>--> 
-    <title>Document</title>
+  <!-- Font Awesome CSS -->
+
+  <!--<title>Dashboard Sidebar Menu</title>-->
+  <title>Document</title>
 </head>
+
 <body>
 
-    <nav class="sidebar close">
-        <header>
-            <div class="image-text">
-                <span class="image">
-                    <img src="assets\logo.jpg" alt="">
-                </span>
+  <nav class="sidebar close">
+    <header>
+      <div class="image-text">
+        <span class="image">
+          <img src="assets\logo.jpg" alt="">
+        </span>
 
-                <div class="text logo-text">
-                    <span class="name">Traivis</span>
-                    <!-- <span class="profession">Web developer</span> -->
-                </div>
-            </div>
+        <div class="text logo-text">
+          <span class="name">Traivis</span>
+          <!-- <span class="profession">Web developer</span> -->
+        </div>
+      </div>
 
-            <i class='bx bx-chevron-right toggle'></i>
-        </header>
+      <i class='bx bx-chevron-right toggle'></i>
+   </header>
 
-        <div class="menu-bar">
-            <div class="menu">
+    <div class="menu-bar">
+      <div class="menu">
 
-                <li class="search-box">
-                    <i class='bx bx-search icon'></i>
-                    <input type="text" placeholder="Search...">
-                </li>
+        <li class="search-box">
+          <i class='bx bx-search icon'></i>
+          <input type="text" placeholder="Search...">
+        </li>
 
-                <ul class="menu-links">
-                    <li class="nav-link">
-                        <a href="meeting.html">
-                            <!-- <i class='bx bx-home-alt icon' ></i> -->
-                            <i class='bx bxs-dashboard icon'></i>
-                            <span class="text nav-text">Meet</span>
-                        </a>
-                    </li>
+      <ul class="menu-links">
+          <li class="nav-link">
+            <a href="meeting.html">
+              <!-- <i class='bx bx-home-alt icon' ></i> -->
+              <i class='bx bxs-dashboard icon'></i>
+              <span class="text nav-text">Meet</span>
+            </a>
+          </li>
 
-                    <li class="nav-link">
-                        <a href="#">
-                            <!-- <i class='bx bx-bar-chart-alt-2 icon' ></i> -->
-                            <i class='bx bx-lock-alt icon'></i>
-                            <span class="text nav-text">Lock</span>
-                        </a>
-                    </li>
+          <li class="nav-link">
+            <a href="#">
+              <!-- <i class='bx bx-bar-chart-alt-2 icon' ></i> -->
+              <i class='bx bx-lock-alt icon'></i>
+              <span class="text nav-text">Lock</span>
+            </a>
+          </li>
 
-                    
 
-                    <li class="nav-link">
-                        <a href="#">
-                            <!-- <i class='bx bx-pie-chart-alt icon' ></i> -->
-                            <i class='bx bx-user icon'></i>
 
-                            <!-- <div class="modal" id="modal">
+          <li class="nav-link">
+            <a href="#">
+              <!-- <i class='bx bx-pie-chart-alt icon' ></i> -->
+              <i class='bx bx-user icon'></i>
+
+              <!-- <div class="modal" id="modal">
                                 <div class="modal-header">
                                   <div class="title">Attendees</div>
                                   <button data-close-button class="close-button">&times;</button>
@@ -89,70 +91,112 @@
                             <div id="overlay"></div> -->
 
 
-                            <span class="text nav-text">Attendees</span>
-                        </a>
-                    </li>
+              <span class="text nav-text">Attendees</span>
+            </a>
+          </li>
 
-                    <li class="nav-link">
-                        <a href="#">
-                            <!-- <i class='bx bx-heart icon' ></i> -->
-                            <i class='bx bxs-calendar icon'></i>
-                            <!-- <iframe src="https://calendar.google.com/calendar/embed?src=harshlf4%40gmail.com&ctz=Asia%2FKolkata" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe> -->
-                            <div class="modal" id="modal">
-                                <div class="modal-header">
-                                  <div class="title">Calendar</div>
-                                  <button data-close-button class="close-button">&times;</button>
-                                </div>
-                                <div class="modal-body">
-                                    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FKolkata&src=aGFyc2hsZjRAZ21haWwuY29t&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=dGk0MTc5bnRlcmhsbjV1dmloaG4zcGdqbWUxZzFrYWFAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=ZW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%2333B679&color=%23EF6C00&color=%230B8043" style="border:solid 1px #777" width="450" height="250" frameborder="0" scrolling="no"></iframe>
-                                </div>
-                              </div>
-                            <div id="overlay"></div>
-                            <span data-modal-target="#modal" class="text nav-text">Calendar</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bx-bell icon'></i>
-                            <span class="text nav-text">Notifications</span>
-                        </a>
-                    </li>
-                    
-
-                </ul>
-            </div>
-
-            <div class="bottom-content">
-                <li class="">
-                    <a href="#">
-                        <!-- <i class='bx bx-log-out icon' ></i> -->
-                        <i class='bx bxs-cog icon'></i>
-                        <span class="text nav-text">Settings</span>
-                    </a>
-                </li>
-
-                <li class="mode">
-                    <div class="sun-moon">
-                        <i class='bx bx-moon icon moon'></i>
-                        <i class='bx bx-sun icon sun'></i>
+          <li class="nav-link">
+            <a href="#">
+              <!-- <i class='bx bx-heart icon' ></i> -->
+              <i class='bx bxs-calendar icon'></i>
+              <!-- <iframe src="https://calendar.google.com/calendar/embed?src=harshlf4%40gmail.com&ctz=Asia%2FKolkata" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe> -->
+              <div class="modal" id="modal">
+                <div class="modal-header">
+                  <div class="title">Calendar</div>
+                  <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body light">
+                  <!-- <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FKolkata&src=aGFyc2hsZjRAZ21haWwuY29t&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=dGk0MTc5bnRlcmhsbjV1dmloaG4zcGdqbWUxZzFrYWFAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&src=ZW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%2333B679&color=%23EF6C00&color=%230B8043" style="border:solid 1px #777" width="450" height="250" frameborder="0" scrolling="no"></iframe> -->
+                  <!-- This example requires Tailwind CSS v2.0+ -->
+                  
+                  <!-- test text. -->
+                  <div class="calendar">
+                    <div class="calendar-header">
+                        <span class="month-picker" id="month-picker">February</span>
+                        <div class="year-picker">
+                            <span class="year-change" id="prev-year">
+                                <pre><</pre>
+                            </span>
+                            <span id="year">2021</span>
+                            <span class="year-change" id="next-year">
+                                <pre>></pre>
+                            </span>
+                        </div>
                     </div>
-                    <span class="mode-text text">Dark mode</span>
-
-                    <div class="toggle-switch">
-                        <span class="switch"></span>
+                    <div class="calendar-body">
+                        <div class="calendar-week-day">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+                        <div class="calendar-days"></div>
                     </div>
-                </li>
-                
-            </div>
-        </div>
+                    <!-- <div class="calendar-footer">
+                        <div class="toggle">
+                            <span>Dark Mode</span>
+                            <div class="dark-mode-switch">
+                                <div class="dark-mode-switch-ident"></div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="month-list"></div>
+                </div>
 
-    </nav>
+              </div>
 
-    <section class="home">
-        <div class="text">Dashboard Sidebar</div>
-    </section>
 
-    <nav class="sidebar-right close">
+
+              </div>
+              <div id="overlay"></div>
+              <span data-modal-target="#modal" class="text nav-text">Calendar</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#">
+              <i class='bx bx-bell icon'></i>
+              <span class="text nav-text">Notifications</span>
+            </a>
+          </li>
+
+
+        </ul>
+      </div>
+
+      <div class="bottom-content">
+        <li class="">
+          <a href="#">
+            <!-- <i class='bx bx-log-out icon' ></i> -->
+            <i class='bx bxs-cog icon'></i>
+            <span class="text nav-text">Settings</span>
+          </a>
+        </li>
+
+        <li class="mode">
+          <div class="sun-moon">
+            <i class='bx bx-moon icon moon'></i>
+            <i class='bx bx-sun icon sun'></i>
+          </div>
+          <span class="mode-text text">Dark mode</span>
+
+          <div class="toggle-switch">
+            <span class="switch"></span>
+          </div>
+        </li>
+
+      </div>
+    </div>
+
+  </nav>
+
+  <section class="home">
+    <div class="text">Dashboard Sidebar</div>
+  </section>
+
+  <!-- <nav class="sidebar-right close">
         <header>
             <div class="image-text">
                 <span class="image">
@@ -161,16 +205,17 @@
 
                 <div class="text logo-text">
                     <span class="name">Traivis</span>
-                    <!-- <span class="profession">Web developer</span> -->
+
                 </div>
             </div>
 
             <i class='bx bx-chevron-right toggle'></i>
         </header>
 
-    </nav>
+    </nav> -->
 
-    <script src="index.js"></script>
+  <script src="index.js"></script>
 
 </body>
+
 </html>
